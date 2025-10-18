@@ -3,7 +3,8 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "咸虾米壁纸"
+				"navigationBarTitleText": "咸虾米壁纸",
+				"navigationStyle": "custom"
 			}
 		},
 		{
@@ -11,14 +12,23 @@
 			"style" : 
 			{
 				"navigationBarTitleText" : "分类",
-				"enablePullDownRefresh": true
+				"enablePullDownRefresh": true,
+				"navigationStyle": "custom"
 			}
 		},
 		{
 			"path" : "pages/user/user",
 			"style" : 
 			{
-				"navigationBarTitleText" : "我的"
+				"navigationBarTitleText" : "我的",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/classlist/classlist",
+			"style" : 
+			{
+				"navigationBarTitleText" : "分类列表"
 			}
 		}
 	],
