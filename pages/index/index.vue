@@ -62,6 +62,8 @@
 			
 			<view class="content">
 				<theme-item v-for="item in 8"></theme-item>
+				<theme-item :isMore="true"></theme-item>
+				
 			</view>
 		</view>
 		
@@ -172,7 +174,7 @@
 	}
 	
 	.theme {
-		padding-top: 50rpx;
+		padding: 50rpx 0;
 		.more{
 			font-size: 32rpx;
 			color: #888;
