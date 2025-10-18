@@ -1,5 +1,5 @@
 <template>
-	<view class="userLayout">
+	<view class="userLayout pageBg">
 		<view class="userInfo">
 			<view class="avatar">
 				<image src="../../static/images/xxmLogo.png" mode="aspectFill"></image>
@@ -13,7 +13,7 @@
 			<view class="list">
 				<view class="row">
 					<view class="left">
-						<uni-icons type="download-filled" size="20" color="#28b389"></uni-icons>
+						<uni-icons type="download-filled" size="20" ></uni-icons>
 						<view class="text">我的下载</view>
 					</view>
 					<view class="right">
@@ -23,7 +23,7 @@
 				</view>
 				<view class="row">
 					<view class="left">
-						<uni-icons type="star-filled" size="20" color="#28b389"></uni-icons>
+						<uni-icons type="star-filled" size="20" ></uni-icons>
 						<view class="text">我的评分</view>
 					</view>
 					<view class="right">
@@ -33,7 +33,7 @@
 				</view>
 				<view class="row">
 					<view class="left">
-						<uni-icons type="weixin" size="20" color="#28b389"></uni-icons>
+						<uni-icons type="weixin" size="20" ></uni-icons>
 						<view class="text">联系客服</view>
 						<!-- #ifdef MP -->
 						<button open-type="contact">联系客服</button>
@@ -44,7 +44,7 @@
 					</view>
 					<view class="right">
 						<view class="text"></view>
-						<uni-icons type="right" size="15" color="#aaa"></uni-icons>
+						<uni-icons type="right" size="15" ></uni-icons>
 					</view>
 				</view>
 			</view>
@@ -54,7 +54,7 @@
 			<view class="list">
 				<view class="row" >
 					<view class="left">
-						<uni-icons type="notification-filled" size="20"  color="#28b389"></uni-icons>
+						<uni-icons type="notification-filled" size="20"  ></uni-icons>
 						<view class="text">订阅更新</view>
 					</view>
 					<view class="right">
@@ -64,7 +64,7 @@
 				</view>
 				<view class="row" >
 					<view class="left">
-						<uni-icons type="flag-filled" size="20"  color="#28b389"></uni-icons>
+						<uni-icons type="flag-filled" size="20" ></uni-icons>
 						<view class="text">常见问题</view>
 					</view>
 					<view class="right">
@@ -135,6 +135,7 @@ const clickContact = ()=>{
 				height: 100rpx;
 				border-bottom: 1px solid #eee;
 				position: relative;
+				background: #fff;
 				
 				&:last-child{
 					border-bottom: 0;
@@ -144,6 +145,11 @@ const clickContact = ()=>{
 					// width: 200rpx;
 					display: flex;
 					align-items: center;
+					:deep(){
+					    .uni-icons{
+							color: $brand-theme-color !important;
+						}
+					}
 					
 					.text {
 						padding-left: 20rpx;
@@ -157,6 +163,7 @@ const clickContact = ()=>{
 					.text{
 						font-size: 28rpx;
 						color: #aaa;
+						
 					}
 				}
 				

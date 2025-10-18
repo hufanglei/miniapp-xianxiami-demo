@@ -56,8 +56,11 @@
   align-items: center;
   justify-content: center;
 }
+.homeLayOut .notice .left.data-v-1cf27b2a  .uni-icons {
+  color: #28B389 !important;
+}
 .homeLayOut .notice .left .text.data-v-1cf27b2a {
-  color: #28b389;
+  color: #28B389;
   font-weight: 600;
   font-size: 28rpx;
 }
@@ -85,9 +88,12 @@
   padding-top: 50rpx;
 }
 .homeLayOut .select .date.data-v-1cf27b2a {
-  color: #28b389;
+  color: #28B389;
   display: flex;
   align-items: center;
+}
+.homeLayOut .select .date.data-v-1cf27b2a  .uni-icons {
+  color: #28B389 !important;
 }
 .homeLayOut .select .date .text.data-v-1cf27b2a {
   margin-left: 5rpx;

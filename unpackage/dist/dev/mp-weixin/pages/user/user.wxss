@@ -64,6 +64,7 @@
   height: 100rpx;
   border-bottom: 1px solid #eee;
   position: relative;
+  background: #fff;
 }
 .userLayout .section .list .row.data-v-0f7520f0:last-child {
   border-bottom: 0;
@@ -71,6 +72,9 @@
 .userLayout .section .list .row .left.data-v-0f7520f0 {
   display: flex;
   align-items: center;
+}
+.userLayout .section .list .row .left.data-v-0f7520f0  .uni-icons {
+  color: #28B389 !important;
 }
 .userLayout .section .list .row .left .text.data-v-0f7520f0 {
   padding-left: 20rpx;
