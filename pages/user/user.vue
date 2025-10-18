@@ -8,9 +8,10 @@
 			<view class="address">来自于: 山东</view>
 		</view>
 		
+		
 		<view class="section">
 			<view class="list">
-				<view class="row" v-for="item in 3">
+				<view class="row">
 					<view class="left">
 						<uni-icons type="download-filled" size="20" color="#28b389"></uni-icons>
 						<view class="text">我的下载</view>
@@ -20,18 +21,54 @@
 						<uni-icons type="right" size="15" color="#aaa"></uni-icons>
 					</view>
 				</view>
+				<view class="row">
+					<view class="left">
+						<uni-icons type="star-filled" size="20" color="#28b389"></uni-icons>
+						<view class="text">我的评分</view>
+					</view>
+					<view class="right">
+						<view class="text">33</view>
+						<uni-icons type="right" size="15" color="#aaa"></uni-icons>
+					</view>
+				</view>
+				<view class="row">
+					<view class="left">
+						<uni-icons type="weixin" size="20" color="#28b389"></uni-icons>
+						<view class="text">联系客服</view>
+						<!-- #ifdef MP -->
+						<button open-type="contact">联系客服</button>
+						<!-- #endif -->
+						<!-- #ifndef MP -->
+						<button @click="clickContact">拨打电话</button>
+						<!-- #endif -->
+					</view>
+					<view class="right">
+						<view class="text"></view>
+						<uni-icons type="right" size="15" color="#aaa"></uni-icons>
+					</view>
+				</view>
 			</view>
 		</view>
 		
 		<view class="section">
 			<view class="list">
-				<view class="row" v-for="item in 2">
+				<view class="row" >
 					<view class="left">
-						<uni-icons type="download-filled" size="20"></uni-icons>
-						<view class="text">我的下载</view>
+						<uni-icons type="notification-filled" size="20"  color="#28b389"></uni-icons>
+						<view class="text">订阅更新</view>
 					</view>
 					<view class="right">
-						<view class="text">33</view>
+						<view class="text"></view>
+						<uni-icons type="right" size="15" color="#aaa"></uni-icons>
+					</view>
+				</view>
+				<view class="row" >
+					<view class="left">
+						<uni-icons type="flag-filled" size="20"  color="#28b389"></uni-icons>
+						<view class="text">常见问题</view>
+					</view>
+					<view class="right">
+						<view class="text"></view>
 						<uni-icons type="right" size="15" color="#aaa"></uni-icons>
 					</view>
 				</view>
@@ -45,6 +82,11 @@
 <script setup>
 import { ref } from "vue";
 
+const clickContact = ()=>{
+	uni.makePhoneCall({
+		phoneNumber: '15166195970' //仅为示例
+	});
+}
 	
 </script>
 
@@ -92,6 +134,7 @@ import { ref } from "vue";
 				padding: 0 30rpx;
 				height: 100rpx;
 				border-bottom: 1px solid #eee;
+				position: relative;
 				
 				&:last-child{
 					border-bottom: 0;
@@ -117,7 +160,14 @@ import { ref } from "vue";
 					}
 				}
 				
-				
+				button {
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 100rpx;
+					width: 100%;
+					opacity: 0;
+				}
 				
 				
 			}

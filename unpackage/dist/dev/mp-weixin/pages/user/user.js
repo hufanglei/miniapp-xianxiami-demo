@@ -15,33 +15,52 @@ const _sfc_main = {
     return (_ctx, _cache) => {
       return {
         a: common_assets._imports_0$1,
-        b: common_vendor.f(3, (item, k0, i0) => {
-          return {
-            a: "0f7520f0-0-" + i0,
-            b: "0f7520f0-1-" + i0
-          };
-        }),
-        c: common_vendor.p({
+        b: common_vendor.p({
           type: "download-filled",
           size: "20",
           color: "#28b389"
         }),
-        d: common_vendor.p({
+        c: common_vendor.p({
           type: "right",
           size: "15",
           color: "#aaa"
         }),
-        e: common_vendor.f(2, (item, k0, i0) => {
-          return {
-            a: "0f7520f0-2-" + i0,
-            b: "0f7520f0-3-" + i0
-          };
+        d: common_vendor.p({
+          type: "star-filled",
+          size: "20",
+          color: "#28b389"
+        }),
+        e: common_vendor.p({
+          type: "right",
+          size: "15",
+          color: "#aaa"
         }),
         f: common_vendor.p({
-          type: "download-filled",
-          size: "20"
+          type: "weixin",
+          size: "20",
+          color: "#28b389"
         }),
         g: common_vendor.p({
+          type: "right",
+          size: "15",
+          color: "#aaa"
+        }),
+        h: common_vendor.p({
+          type: "notification-filled",
+          size: "20",
+          color: "#28b389"
+        }),
+        i: common_vendor.p({
+          type: "right",
+          size: "15",
+          color: "#aaa"
+        }),
+        j: common_vendor.p({
+          type: "flag-filled",
+          size: "20",
+          color: "#28b389"
+        }),
+        k: common_vendor.p({
           type: "right",
           size: "15",
           color: "#aaa"

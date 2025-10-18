@@ -63,6 +63,7 @@
   padding: 0 30rpx;
   height: 100rpx;
   border-bottom: 1px solid #eee;
+  position: relative;
 }
 .userLayout .section .list .row.data-v-0f7520f0:last-child {
   border-bottom: 0;
@@ -82,4 +83,12 @@
 .userLayout .section .list .row .right .text.data-v-0f7520f0 {
   font-size: 28rpx;
   color: #aaa;
+}
+.userLayout .section .list .row button.data-v-0f7520f0 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100rpx;
+  width: 100%;
+  opacity: 0;
 }
