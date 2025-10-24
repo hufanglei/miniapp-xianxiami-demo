@@ -16,7 +16,7 @@
 				<uni-dateformat :date="new Date()" format="MM月dd日"></uni-dateformat>
 			</view>
 			<view class="footer">
-				<view class="box">
+				<view class="box" @click="clickInfo">
 					<uni-icons type="info" size="23"></uni-icons>
 					<view class="text">信息</view>
 				</view>
@@ -30,6 +30,28 @@
 				</view>
 			</view>
 		</view>
+
+		
+		<uni-popup ref="infoPopup" type="bottom">
+			<view class="infoPopup">
+				<view class="popHeader">
+					<view></view>
+					<view class="title">壁纸信息</view>
+					<view class="close">
+						<uni-icons type="closeempty" size="18" color="#999"></uni-icons>
+					</view>
+				</view>
+				<scroll-view scroll-y>
+					<view class="content">
+						<view class="row" v-for="item in 20">
+							<view class="label">壁纸ID：</view>
+							<text selectable class="value">1212123415fad</text>
+						</view>
+					</view>
+				</scroll-view>
+			</view>
+		</uni-popup>
+
 	</view>
 </template>
 
@@ -37,7 +59,15 @@
 import { ref } from "vue";
 
 const maskState = ref(true);
+const infoPopup = ref(null);
 
+// 点击info弹窗
+const clickInfo = ()=>{
+	console.log(infoPopup.value)
+	infoPopup.value.open();
+}
+
+// 遮罩状态
 const maskChange = () => {
 	maskState.value = !maskState.value;
 }
@@ -115,6 +145,30 @@ const maskChange = () => {
 			  }
 		  }
 	   }
+	}
+	
+	.infoPopup{
+		width: 100%;
+		background: #fff;
+		padding: 30rpx;
+		border-radius: 30rpx 30rpx 0 0;
+		overflow: hidden;
+		.popHeader{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.title{
+				color: $text-font-color-2;
+				font-size: 26rpx;
+			}
+			.close{
+				border: 1px solid red;
+				padding: 6rpx;
+			}
+		}
+		scroll-view{
+			max-height: 60vh;
+		}
 	}
 }
 

@@ -4,17 +4,24 @@ const common_assets = require("../../common/assets.js");
 if (!Array) {
   const _easycom_uni_dateformat2 = common_vendor.resolveComponent("uni-dateformat");
   const _easycom_uni_icons2 = common_vendor.resolveComponent("uni-icons");
-  (_easycom_uni_dateformat2 + _easycom_uni_icons2)();
+  const _easycom_uni_popup2 = common_vendor.resolveComponent("uni-popup");
+  (_easycom_uni_dateformat2 + _easycom_uni_icons2 + _easycom_uni_popup2)();
 }
 const _easycom_uni_dateformat = () => "../../uni_modules/uni-dateformat/components/uni-dateformat/uni-dateformat.js";
 const _easycom_uni_icons = () => "../../uni_modules/uni-icons/components/uni-icons/uni-icons.js";
+const _easycom_uni_popup = () => "../../uni_modules/uni-popup/components/uni-popup/uni-popup.js";
 if (!Math) {
-  (_easycom_uni_dateformat + _easycom_uni_icons)();
+  (_easycom_uni_dateformat + _easycom_uni_icons + _easycom_uni_popup)();
 }
 const _sfc_main = {
   __name: "preview",
   setup(__props) {
     const maskState = common_vendor.ref(true);
+    const infoPopup = common_vendor.ref(null);
+    const clickInfo = () => {
+      common_vendor.index.__f__("log", "at pages/preview/preview.vue:66", infoPopup.value);
+      infoPopup.value.open();
+    };
     const maskChange = () => {
       maskState.value = !maskState.value;
     };
@@ -39,15 +46,31 @@ const _sfc_main = {
           type: "info",
           size: "23"
         }),
-        h: common_vendor.p({
+        h: common_vendor.o(clickInfo),
+        i: common_vendor.p({
           type: "star",
           size: "23"
         }),
-        i: common_vendor.p({
+        j: common_vendor.p({
           type: "download",
           size: "23"
         })
-      } : {});
+      } : {}, {
+        k: common_vendor.p({
+          type: "closeempty",
+          size: "18",
+          color: "#999"
+        }),
+        l: common_vendor.f(20, (item, k0, i0) => {
+          return {};
+        }),
+        m: common_vendor.sr(infoPopup, "2dad6c07-5", {
+          "k": "infoPopup"
+        }),
+        n: common_vendor.p({
+          type: "bottom"
+        })
+      });
     };
   }
 };
