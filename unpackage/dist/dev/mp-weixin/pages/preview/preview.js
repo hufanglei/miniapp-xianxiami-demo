@@ -19,12 +19,24 @@ const _sfc_main = {
   setup(__props) {
     const maskState = common_vendor.ref(true);
     const infoPopup = common_vendor.ref(null);
+    const scorePopup = common_vendor.ref(null);
+    const useScore = common_vendor.ref(0);
     const clickInfo = () => {
-      common_vendor.index.__f__("log", "at pages/preview/preview.vue:95", infoPopup.value);
+      common_vendor.index.__f__("log", "at pages/preview/preview.vue:117", infoPopup.value);
       infoPopup.value.open();
     };
     const clickInfoClose = () => {
       infoPopup.value.close();
+    };
+    const clickScore = () => {
+      scorePopup.value.open();
+      common_vendor.index.__f__("log", "at pages/preview/preview.vue:129", 11);
+    };
+    const clickScoreClose = () => {
+      scorePopup.value.close();
+    };
+    const submitScore = () => {
+      common_vendor.index.__f__("log", "at pages/preview/preview.vue:139", "评分了");
     };
     const maskChange = () => {
       maskState.value = !maskState.value;
@@ -55,31 +67,52 @@ const _sfc_main = {
           type: "star",
           size: "23"
         }),
-        j: common_vendor.p({
+        j: common_vendor.o(clickScore),
+        k: common_vendor.p({
           type: "download",
           size: "23"
         })
       } : {}, {
-        k: common_vendor.p({
+        l: common_vendor.p({
           type: "closeempty",
           size: "18",
           color: "#999"
         }),
-        l: common_vendor.o(clickInfoClose),
-        m: common_vendor.p({
+        m: common_vendor.o(clickInfoClose),
+        n: common_vendor.p({
           readonly: true,
           touchable: "false",
           max: 5,
           value: 3.5
         }),
-        n: common_vendor.f(3, (item, k0, i0) => {
+        o: common_vendor.f(3, (item, k0, i0) => {
           return {};
         }),
-        o: common_vendor.sr(infoPopup, "2dad6c07-5", {
+        p: common_vendor.sr(infoPopup, "2dad6c07-5", {
           "k": "infoPopup"
         }),
-        p: common_vendor.p({
+        q: common_vendor.p({
           type: "bottom"
+        }),
+        r: common_vendor.p({
+          type: "closeempty",
+          size: "18",
+          color: "#999"
+        }),
+        s: common_vendor.o(clickScoreClose),
+        t: common_vendor.o(($event) => useScore.value = $event),
+        v: common_vendor.p({
+          ["allow-half"]: true,
+          modelValue: useScore.value
+        }),
+        w: common_vendor.t(useScore.value),
+        x: common_vendor.o(submitScore),
+        y: !useScore.value,
+        z: common_vendor.sr(scorePopup, "2dad6c07-8", {
+          "k": "scorePopup"
+        }),
+        A: common_vendor.p({
+          ["is-mask-click"]: false
         })
       });
     };
