@@ -1,8 +1,9 @@
 <template>
 	<view class="layout"> 
 		<view class="navbar">
-			<view class="statusBar" :style="{height: statusBarHeight+'px'}"></view>
-			 <view class="titleBar" :style="{height: titleBarHeight+'px'}">
+			<view class="statusBar" :style="{height: getStatusBarHeight()+'px'}"></view>
+			 <view class="titleBar"
+			  :style="{height: getTitleBarHight()+'px', marginLeft: getLeftIconLeft()+'px'}">
 				 <view class="title">标题</view>
 				 <view class="search">
 					 <uni-icons class="icon" type="search" color="#888" size="18"></uni-icons>
@@ -10,7 +11,7 @@
 				 </view>
 			 </view>
 		</view>
-		<view class="fill" :style="{height: statusBarHeight + titleBarHeight +'px'}">
+		<view class="fill" :style="{height: getNavBarHeight() +'px'}">
 			
 		</view>
 	</view>
@@ -18,13 +19,13 @@
 
 <script setup>
 import {ref} from "vue";
-let SYSTEM_INFO = uni.getSystemInfoSync()
-let statusBarHeight = ref(SYSTEM_INFO.statusBarHeight);
+import  { getStatusBarHeight, getTitleBarHight,getNavBarHeight,getLeftIconLeft } from "../../utils/system.js"
+// let statusBarHeight = ref(getStatusBarHeight());
 // console.log(SYSTEM_INFO);
 // console.log(statusBarHeight)
-let { top, height } = uni.getMenuButtonBoundingClientRect();
-let titleBarHeight = ref(height + (top - statusBarHeight.value) *2 );
-console.log(titleBarHeight);
+// let { top, height } = uni.getMenuButtonBoundingClientRect();
+// let titleBarHeight = ref(height + (top - statusBarHeight.value) *2 );
+// console.log(titleBarHeight);
 </script>
 
 <style lang="scss" scoped>
