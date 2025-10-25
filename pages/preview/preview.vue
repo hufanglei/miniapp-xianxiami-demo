@@ -37,15 +37,44 @@
 				<view class="popHeader">
 					<view></view>
 					<view class="title">壁纸信息</view>
-					<view class="close">
+					<view class="close" @click="clickInfoClose">
 						<uni-icons type="closeempty" size="18" color="#999"></uni-icons>
 					</view>
 				</view>
 				<scroll-view scroll-y>
 					<view class="content">
-						<view class="row" v-for="item in 20">
+						<view class="row" >
 							<view class="label">壁纸ID：</view>
 							<text selectable class="value">1212123415fad</text>
+						</view>
+						<view class="row" >
+							<view class="label">分类：</view>
+							<text  class="value class">明星美女</text>
+						</view>
+						<view class="row" >
+							<view class="label">发布者：</view>
+							<text  class="value">咸虾米</text>
+						</view>
+						<view class="row" >
+							<view class="label">评分：</view>
+							<text  class="value roteBox">
+								<uni-rate readonly touchable="false" :max="5" :value="3.5" />
+								<text class="score">5分</text>
+							</text>
+						</view>
+						<view class="row" >
+							<view class="label">摘要：</view>
+							<text  class="value">NBA支持贡献世界名画，文班亚麻封盖杜兰特名场面，图源:微博</text>
+						</view>
+						<view class="row">
+							<text class="label">标签：</text>
+							<view class="value tabs">
+								<view class="tab" v-for="item in 3">标签名</view>
+							</view>
+						</view>
+						
+						<view class="copyright">
+							声明:本图片来用户投稿，非商业使用，用于免费学习交流，如侵犯了您的权益，您可以拷贝壁纸ID举报至平台，邮箱513894357@qq.com，管理将删除侵权壁纸，维护您的权益。
 						</view>
 					</view>
 				</scroll-view>
@@ -65,6 +94,11 @@ const infoPopup = ref(null);
 const clickInfo = ()=>{
 	console.log(infoPopup.value)
 	infoPopup.value.open();
+}
+
+// 点击关闭信息躺床
+const clickInfoClose = () => {
+	infoPopup.value.close();
 }
 
 // 遮罩状态
@@ -168,6 +202,59 @@ const maskChange = () => {
 		}
 		scroll-view{
 			max-height: 60vh;
+			.row{
+				display: flex;
+				padding: 16rpx 0;
+				font-size: 32rpx;
+				line-height: 1.7em;
+				.label {
+					color: $text-font-color-3;
+					width: 140rpx;
+					text-align: right;
+					font-size: 30rpx;	
+				}
+				.value{
+					flex: 1;
+					width: 0;
+				}
+				.roteBox{
+					display: flex;
+					align-items: center;
+					.score{
+						font-size: 26rpx;
+						color: $text-font-color-2;
+						padding-left: 10rpx;
+					}
+				}
+				.tabs{
+					display: flex;
+					flex-wrap: wrap;
+					.tab{
+						border: 1px solid $brand-theme-color;
+						color: $brand-theme-color;
+						font-size: 22rpx;
+						padding: 10rpx 30rpx;
+						border-radius: 40rpx;
+						line-height: 1em;
+						margin: 0 10rpx 10rpx 0;
+					}
+				}
+				.class{
+					color: $brand-theme-color;
+				}
+				
+			}
+			
+			.copyright {
+				font-size: 28rpx;
+				padding: 20rpx;
+				background: #f6f6f6;
+				color: #666;
+				border-radius: 10rpx;
+				margin: 20rpx 0;
+				line-height: 1.6em;
+			}
+			
 		}
 	}
 }

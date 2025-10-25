@@ -4,8 +4,9 @@ const common_assets = require("../../common/assets.js");
 if (!Array) {
   const _easycom_uni_dateformat2 = common_vendor.resolveComponent("uni-dateformat");
   const _easycom_uni_icons2 = common_vendor.resolveComponent("uni-icons");
+  const _component_uni_rate = common_vendor.resolveComponent("uni-rate");
   const _easycom_uni_popup2 = common_vendor.resolveComponent("uni-popup");
-  (_easycom_uni_dateformat2 + _easycom_uni_icons2 + _easycom_uni_popup2)();
+  (_easycom_uni_dateformat2 + _easycom_uni_icons2 + _component_uni_rate + _easycom_uni_popup2)();
 }
 const _easycom_uni_dateformat = () => "../../uni_modules/uni-dateformat/components/uni-dateformat/uni-dateformat.js";
 const _easycom_uni_icons = () => "../../uni_modules/uni-icons/components/uni-icons/uni-icons.js";
@@ -19,8 +20,11 @@ const _sfc_main = {
     const maskState = common_vendor.ref(true);
     const infoPopup = common_vendor.ref(null);
     const clickInfo = () => {
-      common_vendor.index.__f__("log", "at pages/preview/preview.vue:66", infoPopup.value);
+      common_vendor.index.__f__("log", "at pages/preview/preview.vue:95", infoPopup.value);
       infoPopup.value.open();
+    };
+    const clickInfoClose = () => {
+      infoPopup.value.close();
     };
     const maskChange = () => {
       maskState.value = !maskState.value;
@@ -61,13 +65,20 @@ const _sfc_main = {
           size: "18",
           color: "#999"
         }),
-        l: common_vendor.f(20, (item, k0, i0) => {
+        l: common_vendor.o(clickInfoClose),
+        m: common_vendor.p({
+          readonly: true,
+          touchable: "false",
+          max: 5,
+          value: 3.5
+        }),
+        n: common_vendor.f(3, (item, k0, i0) => {
           return {};
         }),
-        m: common_vendor.sr(infoPopup, "2dad6c07-5", {
+        o: common_vendor.sr(infoPopup, "2dad6c07-5", {
           "k": "infoPopup"
         }),
-        n: common_vendor.p({
+        p: common_vendor.p({
           type: "bottom"
         })
       });
