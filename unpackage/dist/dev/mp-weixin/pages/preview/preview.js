@@ -4,15 +4,16 @@ const common_assets = require("../../common/assets.js");
 if (!Array) {
   const _easycom_uni_dateformat2 = common_vendor.resolveComponent("uni-dateformat");
   const _easycom_uni_icons2 = common_vendor.resolveComponent("uni-icons");
-  const _component_uni_rate = common_vendor.resolveComponent("uni-rate");
+  const _easycom_uni_rate2 = common_vendor.resolveComponent("uni-rate");
   const _easycom_uni_popup2 = common_vendor.resolveComponent("uni-popup");
-  (_easycom_uni_dateformat2 + _easycom_uni_icons2 + _component_uni_rate + _easycom_uni_popup2)();
+  (_easycom_uni_dateformat2 + _easycom_uni_icons2 + _easycom_uni_rate2 + _easycom_uni_popup2)();
 }
 const _easycom_uni_dateformat = () => "../../uni_modules/uni-dateformat/components/uni-dateformat/uni-dateformat.js";
 const _easycom_uni_icons = () => "../../uni_modules/uni-icons/components/uni-icons/uni-icons.js";
+const _easycom_uni_rate = () => "../../uni_modules/uni-rate/components/uni-rate/uni-rate.js";
 const _easycom_uni_popup = () => "../../uni_modules/uni-popup/components/uni-popup/uni-popup.js";
 if (!Math) {
-  (_easycom_uni_dateformat + _easycom_uni_icons + _easycom_uni_popup)();
+  (_easycom_uni_dateformat + _easycom_uni_icons + _easycom_uni_rate + _easycom_uni_popup)();
 }
 const _sfc_main = {
   __name: "preview",
