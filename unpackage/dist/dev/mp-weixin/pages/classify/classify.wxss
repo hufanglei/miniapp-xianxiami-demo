@@ -23,7 +23,7 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.classLayout .classify.data-v-6bcfa975 {
+.classify.data-v-6bcfa975 {
   padding: 30rpx;
   display: grid;
   grid-template-columns: repeat(3, 1fr);

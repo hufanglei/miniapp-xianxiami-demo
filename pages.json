@@ -38,6 +38,31 @@
 				"navigationBarTitleText" : "预览",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path" : "pages/notice/notice",
+			"style" : 
+			{
+				"navigationBarTitleText" : "公告",
+				"enablePullDownRefresh" : false
+			}
+		},
+		
+		{
+			"path" : "pages/notice/detail",
+			"style" : 
+			{
+				"navigationBarTitleText" : "公告详情",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/search/search",
+			"style" : 
+			{
+				"navigationBarTitleText" : "搜索",
+				"enablePullDownRefresh" : false
+			}
 		}
 	],
 	"globalStyle": {
