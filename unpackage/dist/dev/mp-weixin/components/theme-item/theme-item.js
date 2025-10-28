@@ -46,7 +46,7 @@ const _sfc_main = {
         h: common_assets._imports_0$1,
         i: common_vendor.p({
           type: "more-filled",
-          size: "30",
+          size: "34",
           color: "#fff"
         })
       } : {});
